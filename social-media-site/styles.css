@@ -1433,9 +1433,35 @@ p {
   resize: vertical;
 }
 
-.form-submit {
-  width: 100%;
+.form-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
   margin-top: 9px;
+}
+
+.form-actions .button {
+  min-width: 0;
+  min-height: 49px;
+  gap: 8px;
+  padding-inline: 12px;
+  font-size: 12px;
+}
+
+.button-whatsapp {
+  border: 1px solid #238b58;
+  background: #176c45;
+  color: var(--white);
+}
+
+.button-whatsapp:hover {
+  background: #218653;
+}
+
+.button-whatsapp svg {
+  width: 19px;
+  height: 19px;
+  fill: currentColor;
 }
 
 .form-note {
@@ -1471,7 +1497,8 @@ p {
 }
 
 .footer-main > p,
-.back-top {
+.back-top,
+.footer-whatsapp {
   margin: 0;
   color: #a3a8b4;
   font-size: 11px;
@@ -1479,6 +1506,14 @@ p {
 
 .back-top:hover {
   color: var(--white);
+}
+
+.footer-whatsapp {
+  color: #62cf91;
+}
+
+.footer-whatsapp:hover {
+  color: #a1efbf;
 }
 
 .footer-bottom {
@@ -1853,6 +1888,18 @@ p {
   }
 
   .footer-main > p {
+    display: none;
+  }
+
+  .footer-main {
+    gap: 12px;
+  }
+
+  .footer-whatsapp {
+    font-size: 10px;
+  }
+
+  .footer-main .back-top {
     display: none;
   }
 
